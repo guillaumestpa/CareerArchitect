@@ -1,6 +1,7 @@
 {
   "name": "career-architect",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@11.24.0",
   "engines": {
     "node": ">=22"
@@ -9,6 +10,12 @@
     "dev": "pnpm --filter web dev",
     "build": "pnpm -r build",
     "lint": "pnpm -r --if-present run lint",
-    "typecheck": "pnpm -r --if-present run typecheck"
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "supabase": "^2.115.0",
+    "vitest": "^4.1.11"
   }
 }
