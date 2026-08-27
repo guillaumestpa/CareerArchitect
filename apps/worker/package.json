@@ -9,11 +9,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@career-architect/shared": "workspace:*"
+    "@career-architect/shared": "workspace:*",
+    "@supabase/supabase-js": "^2.112.4"
   },
   "devDependencies": {
     "@career-architect/config": "workspace:*",
     "@types/node": "^22.0.0",
+    "dotenv": "^17.4.2",
     "eslint": "^9.9.0",
     "tsx": "^4.16.0",
     "typescript": "^5.5.0"

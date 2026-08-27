@@ -9,6 +9,7 @@ out/
 # build output
 dist/
 build/
+coverage/
 
 # env
 .env
