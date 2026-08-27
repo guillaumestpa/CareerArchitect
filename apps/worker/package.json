@@ -1,0 +1,21 @@
+{
+  "name": "@career-architect/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@career-architect/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@career-architect/config": "workspace:*",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.9.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}

@@ -1,0 +1,14 @@
+# Placeholder Supabase CLI config — replace by running `supabase init` (or `supabase link`)
+# once a real Supabase project exists. See docs/career-engineer-project-state-*.md, Tech stack.
+project_id = "career-architect"
+
+[api]
+enabled = true
+port = 54321
+
+[db]
+port = 54322
+
+[studio]
+enabled = true
+port = 54323

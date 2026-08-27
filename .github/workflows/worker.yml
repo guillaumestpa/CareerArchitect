@@ -1,0 +1,29 @@
+name: Worker Cycle
+
+# Stub schedule — disabled until the worker has real pipeline logic.
+# Uncomment the schedule trigger once apps/worker does actual scraping/monitoring work.
+on:
+  workflow_dispatch: {}
+  # schedule:
+  #   - cron: "0 6 * * *"
+
+jobs:
+  run-worker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm --filter worker start
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}

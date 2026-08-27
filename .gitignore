@@ -1,0 +1,38 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# next.js
+.next/
+out/
+
+# build output
+dist/
+build/
+
+# env
+.env
+.env.local
+.env.*.local
+
+# supabase local
+supabase/.branches
+supabase/.temp
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# editor / OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+Thumbs.db
+
+# claude code local settings (machine-specific, not shared)
+.claude/settings.local.json
+
+# turbo / tsc
+.turbo/
+*.tsbuildinfo
